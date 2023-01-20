@@ -19,7 +19,7 @@ deno run -A --unstable "./run.ts" <input_files> <tests_folder>
 example :
 
 ```sh
-deno run -A --unstable "./run.ts" "./example/source.ml" "./example/tests"
+deno run -A --unstable "https://raw.githubusercontent.com/MajorBarnulf/epitls-camelo/master/run.ts" "./example/source.ml" "./example/tests"
 ```
 
 ## Author
