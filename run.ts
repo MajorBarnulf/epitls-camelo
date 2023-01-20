@@ -28,7 +28,8 @@ const raw_sources = await Promise.all(
   input_files.map((f) => Deno.readTextFile(f)),
 );
 console.log(col.blue("---- diff to runnable sections ----"));
-const sources = await Promise.all(raw_sources.map(reduce_to_runable));
+const sources = [] as string[];
+for (const s of raw_sources) sources.push(await reduce_to_runable(s));
 const prelude = sources.join("\n");
 
 const tests_dir = cli.parameter_value("tests")!;
